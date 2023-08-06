@@ -1,0 +1,53 @@
+img {
+    width: 100px;
+    position: absolute;
+}
+
+#container {
+    width: 1000px;
+    height: 700px;
+    border: 1px solid red;
+    position: relative;
+    margin: auto;
+    background-image: url(gamebg.gif);
+    background-size: cover;
+}
+
+#enemy2 {
+    transform: rotate(-30deg);
+}
+
+#character {
+    bottom: 0;
+    width: 80px;
+    margin-bottom: 40px;
+}
+
+#welcome {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    border: 1px solid red;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: royalblue;
+    background-color: turquoise;
+}
+
+#gameOver {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: tomato;
+    visibility: hidden;
+}
