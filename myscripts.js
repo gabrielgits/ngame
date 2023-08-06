@@ -1,5 +1,8 @@
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', './assets/sounds/play.mp3');
 
 $(document).ready(() => {
+    
     let div = $("#container")
     div.css("display", "none");
     var characterMargin = (div.innerWidth() - 90) / 2;
@@ -105,11 +108,13 @@ $(document).ready(() => {
 
 
 function welcome() {
+    
     let welcome = $("#welcome");
     welcome.css("display", "none")
 
     let div = $("#container")
     div.css("display", "");
+    audioElement.play();
 }
 
 // function enemies(myEnemy, margin, id) {
@@ -139,6 +144,7 @@ function welcome() {
 // }
 
 function gameOver(myEnemy) {
+    
     let div = $("#container")
     let gameOver = $("#gameOver")
     var eML = parseInt(myEnemy.css("margin-left"));
@@ -156,6 +162,7 @@ function gameOver(myEnemy) {
         div.css("display", "none");
         gameOver.css("visibility", "visible")
     }
+   // audioElement.stop();
 }
 
 function startAgain() {
