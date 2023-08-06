@@ -7,18 +7,26 @@ $(document).ready(() => {
     character.css("margin-left", characterMargin)
 
     $(function () {
-        $(document).keyup(function (e) {
+        $(document).keydown(function (e) {
             let character = $("#character")
+            character.attr("src", "./assets/character/character_run.gif");
             if (e.keyCode == 37) {
+                character.css ("transform", "scaleX(-1)");
                 characterMargin -= 20;
                 character.css("margin-left", characterMargin)
             }
 
             if (e.keyCode == 39) {
+                character.css ("transform", "scaleX(1)");
                 characterMargin += 20;
                 character.css("margin-left", characterMargin)
             }
             var cMargin = $("#character").css("margin-left");
+        });
+        $(document).keyup(function (e) {
+            let character = $("#character");
+            character.attr("src", "./assets/character/character_stop.gif");
+
         });
     });
 
